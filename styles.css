@@ -1,0 +1,256 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img:not(.logo) {
+    width: 100%;
+}
+
+img {
+    display: block;
+}
+
+header {
+    min-height: 100vh;
+    background: linear-gradient(rgba(36, 153, 243, 0.5), rgba(0, 0, 0, .7)), url(./hero-bcg.jpeg) center/cover no-repeat;
+}
+
+nav {
+    padding: 1rem 1.5rem;
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 50px;
+}
+
+.nav-toggle {
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.links-container {
+    background-color: rgb(255, 255, 255);
+    transition: 300ms;
+    height: 0;
+    overflow: hidden;
+}
+
+.links a {
+    display: block;
+    font-size: 1.rem;
+    padding: .75rem 1.5rem;
+    text-transform: capitalize;
+    color: #333;
+    transition: 300ms;
+}
+
+.links a:hover {
+    background-color: rgb(51, 210, 250);
+    color: white;
+}
+
+.banner {
+    min-height: 100vh;
+    padding: 0 1.5rem;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.banner-container h1 {
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.banner-container p {
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.btn-white {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    background-color: transparent;
+    color: white;
+    outline: 1px solid white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    transition: 300ms;
+}
+
+.btn-white:hover {
+    background-color: white;
+    color: #333;
+}
+
+#about,
+#services,
+#tours {
+    height: 80vh;
+}
+
+.title h2 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.title span {
+    color: rgb(5, 167, 208);
+}
+
+#services {
+    background-color: rgba(152, 143, 247, 0.1);
+}
+
+.footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+
+}
+
+.footer p {
+    padding: 5rem 1rem;
+    letter-spacing: 3px;
+}
+
+.scroll-top-btn {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    width: 25px;
+    height: 25px;
+    display: grid;
+    place-items: center;
+    background-color: rgb(51, 210, 250);
+    color: white;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: 300ms;
+    visibility: hidden;
+    z-index: -100;
+}
+
+.scroll-top-btn:hover {
+    background-color: rgb(27, 176, 214);
+}
+
+.show-top-btn {
+    visibility: visible;
+    z-index: 100;
+}
+
+.fixed-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 1px rgba(0, 0, 0, .1);
+    transition: 300ms;
+}
+
+.fixed-navbar .links a {
+    color: #222;
+    transition: 300ms;
+}
+
+.fixed-navbar .links a:hover {
+    color: rgb(29, 159, 240);
+}
+
+.fixed-navbar .nav-toggle {
+    color: #222;
+}
+
+/* media queries */
+@media screen and (min-width:768px) {
+    .nav-center {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+
+    .nav-header {
+        padding: 0;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .links-container {
+        height: auto !important;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+    }
+
+    .links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .links a {
+        color: white;
+        margin: 0 1rem;
+        padding: 0;
+        transition: 300ms;
+    }
+
+    .links a:hover {
+        background-color: transparent;
+        transform: scale(1.1);
+    }
+
+    .banner-container {
+        max-width: 800px;
+    }
+
+    .section {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+
+}
